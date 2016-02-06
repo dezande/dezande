@@ -4,12 +4,28 @@ html lang="en"
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title == content_for?(:title) ? yield(:title) : "Untitled"
+    title == content_for?(:title) ? yield(:title) : "Vincent Corniere"
 
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
 
   body
-
-    == yield
+  header.top-bar.border-bottom
+    .row
+      = render "layouts/nav_header"
+  == yield
+  footer.row.column
+    hr
+    .social
+    ul.menu
+      /!
+        | li>Vincent Cornière</li
+        | <li><a href="#">Home</a></li
+        | <li><a href="#">About</a></li
+        | <li><a href="#">Contact</a></li
+      li.float-right
+        = link_to "https://github.com/dezande/rabbit" do
+          | Trouver le code source du site sur 
+          i.fa.fa-github
+          | GitHub
