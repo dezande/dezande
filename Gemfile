@@ -8,6 +8,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # database
 gem 'mongoid', '~> 5.1.0'
 
+# Html
+gem 'slim'
+
 # css and js
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
