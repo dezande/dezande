@@ -1,5 +1,5 @@
 doctype html
-html lang="en"
+html lang="fr"
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
@@ -11,21 +11,32 @@ html lang="en"
     = csrf_meta_tag
 
   body
-  header.top-bar.border-bottom
-    .row
-      = render "layouts/nav_header"
-  == yield
-  footer.row.column
-    hr
-    .social
-    ul.menu
-      /!
-        | li>Vincent Cornière</li
-        | <li><a href="#">Home</a></li
-        | <li><a href="#">About</a></li
-        | <li><a href="#">Contact</a></li
-      li.float-right
-        = link_to "https://github.com/dezande/dezande" do
-          | Trouver le code source du site sur 
-          i.fa.fa-github
-          | GitHub
+    header
+      .row.columns
+        .top-bar
+          .top-bar-left
+            ul.menu
+              li
+                span data-responsive-toggle="responsive-menu" data-hide-for="medium"
+                  span class="menu-icon dark" data-toggle=""
+              li  
+                = link_to root_path do
+                  strong Vincent Cornière
+          #responsive-menu
+            .top-bar-right
+              ul.menu
+                li = link_to "Accueil", root_path
+                li = link_to "Contact", contact_index_path
+    
+        hr
+
+    == yield
+    footer.row.column
+      hr
+      .social
+      ul.menu
+        li.float-right
+          = link_to "https://github.com/dezande/dezande" do
+            | Trouver le code source du site sur 
+            i.fa.fa-github
+            | GitHub
