@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :homepage
+  resources :homepage, only: :index
+  resources :contact, only: :index
 
-    root 'homepage#index'
+  root 'homepage#index'
 end
