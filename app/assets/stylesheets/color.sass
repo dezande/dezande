@@ -1,0 +1,26 @@
+@import mixin
+@import variable
+@import settings
+
+.color
+  +transition(all 1s)
+  &:hover
+    color: $white
+
+.color-linkelin
+  @extend .color
+  color: $linkelin
+  &:hover
+    background-color: $linkelin
+
+.color-phone
+  @extend .color
+  color: $black
+  &:hover
+    background-color: $black
+
+.color-mail
+  @extend .color
+  color: $midnight-blue
+  &:hover
+    background-color: $midnight-blue

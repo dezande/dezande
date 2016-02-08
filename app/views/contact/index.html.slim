@@ -1,14 +1,20 @@
+- content_for :title, "Contact"
 .row.column.text-center
   h1 Me contacter
 .row.columns.text-center
-  .callout
-    i.fa.fa-mobile 
-    |  06 95 37 49 55
-    br
-    a href="mailto:vincent.corniere@gmail.com" target="_blank"
-      i.fa.fa-envelope-o 
-      |  vincent.corniere@gmail.com
-    br
-    a href="https://fr.linkedin.com/in/vincentcorniere" target="_blank"
-      i.fa.fa-linkedin 
-      |  Ma page Linkedin
+  ul.medium-horizontal.menu.expanded.text-center
+    li
+      a.color-phone href="#"
+        .stat
+          i.fi-telephone.size-72
+        | 06 95 37 49 55
+    li
+      a.color-mail href="mailto:vincent.corniere@gmail.com" target="_blank"
+        .stat
+          i.fi-mail.size-72
+        | vincent.corniere@gmail.com
+    li
+      a.color-linkelin href="https://fr.linkedin.com/in/vincentcorniere" target="_blank"
+        .stat
+          i.fi-social-linkedin.size-72
+        | Linkedin
