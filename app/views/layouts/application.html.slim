@@ -11,8 +11,8 @@ html lang="fr"
     = csrf_meta_tag
 
   body
-    header
-      .row.columns
+    header data-magellan=""
+      .row.columns 
         .top-bar
           .top-bar-left
             ul.menu
@@ -25,19 +25,17 @@ html lang="fr"
           #responsive-menu
             .top-bar-right
               ul.menu
-                li = link_to "Accueil", root_path, :class => active_class(root_path)
-                li = link_to "Compétances", skills_path, :class => active_class(skills_path)
-                li = link_to "Contact", contact_index_path, :class => active_class(contact_index_path)
+                li = link_to "Accueil", "#top"
+                li = link_to "Compétances", "#skills"
+                li = link_to "Contact", "#contact"
+                
+    #top.top data-magellan-target="top"
     
-        hr
-
     == yield
     footer.row.column
-      hr
-      .social
       ul.menu
         li.float-right
           = link_to "https://github.com/dezande/dezande" do
-            | Trouver le code source du site sur 
+            | Retrouver le code source du site sur 
             i.fi-social-github
             | GitHub
