@@ -54,10 +54,14 @@ html lang="fr"
             .stat
               i.fi-social-github.size-72
             | GitHub
-      .row.column
-        ul.menu
-          li.float-right
-            = link_to "https://github.com/dezande/dezande" do
-              | Retrouver le code source du site sur 
+      .row.small-up-1.medium-up-3.text-center
+        .columns
+          = link_to "/cv-vincent-corniere.pdf", target: "_blank" do
+            .stat
+              i.fi-page-pdf
+            | Mon cv en pdf
+        .columns
+          = link_to "https://github.com/dezande/dezande", target: "_blank" do
+            .stat
               i.fi-social-github
-              | GitHub
+            | Le code source du site
