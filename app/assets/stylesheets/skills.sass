@@ -1,0 +1,82 @@
+@import variable
+@import settings
+@import mixin
+
+.skills-icons
+  margin: 10px auto
+  width: 150px
+  height: 70px
+  font-size: 1.5rem
+  color: $white
+  padding-top: 15px
+
+.skills-icons-ruby
+  @extend .skills-icons
+  background-color: $ruby
+
+.skills-icons-javascript
+  @extend .skills-icons
+  background-color: $javascript
+
+.skills-icons-php
+  @extend .skills-icons
+  background-color: $php
+
+.skills-icons-git
+  @extend .skills-icons
+  background-color: $git
+
+.skills-icons-sql
+  @extend .skills-icons
+  background-color: $sql
+
+.skills-icons-html
+  @extend .skills-icons
+  background-color: $html
+
+.skills-icons-css
+  @extend .skills-icons
+  background-color: $css
+
+.skills-icons-xml
+  @extend .skills-icons
+  background-color: $xml
+
+.skills-icons-mongodb
+  @extend .skills-icons
+  background-color: $mongodb
+
+.skills
+  .columns
+    +transform(rotate(-2deg))
+    +transition(transform 0.5s)
+    -webkit-transition: -webkit-transform 0.5s
+
+  .columns:nth-child(even)
+    +transform(rotate(3deg))
+
+  .columns:nth-child(3n)
+    +transform(none)
+    position: relative
+    top: -5px
+
+  .columns:nth-child(5n)
+    +transform(rotate(5deg))
+    position: relative
+    right: 5px
+
+  .columns:nth-child(8n)
+    +transform(rotate(2deg))
+    position: relative
+    top: 8px
+    right: 5px
+
+  .columns:nth-child(11n)
+    position: relative
+    top: 3px
+    left: -5px
+
+  .columns:hover
+    +transform(scale(1.25))
+    position: relative
+    z-index: 5
