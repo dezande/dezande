@@ -1,0 +1,38 @@
+@import mixin
+@import variable
+@import settings
+
+.contact-color
+  +transition(all 1s)
+  padding: 10px 0
+  &:hover
+    a
+      color: $white
+
+.contact-color-linkelin
+  @extend .contact-color
+  a
+    color: $linkelin
+  &:hover
+    background-color: $linkelin
+
+.contact-color-phone
+  @extend .contact-color
+  a
+    color: $black
+  &:hover
+    background-color: $black
+
+.contact-color-mail
+  @extend .contact-color
+  a
+    color: $midnight-blue
+  &:hover
+    background-color: $midnight-blue
+
+.contact-color-github
+  @extend .contact-color
+  a
+    color: $black
+  &:hover
+    background-color: $black
