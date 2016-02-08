@@ -1,24 +1,42 @@
 @import settings
 @import mixin
+@import variable
 
-.footer
-  border-top: 1px solid #e7e7e7
+footer
+  h2
+    color: $white
+    text-transform: uppercase
+  margin-top: 15px
+  border-top: 10px lighten($primary-color, 20%) solid
+  background-color: $primary-color
   padding-top: 10px
-  margin-top: 20px
+  padding-bottom: 10px
+  a
+    color: lighten($primary-color, 90%)
+  a:hover
+    color: lighten($primary-color, 30%)
 
-/*.home__article--cercle
-  border-radius: 50%
-  width: 100px
-  height: 100px
-  overflow: hidden
-  border: 5px solid #e7e7e7
-  +transition(border-color, 0.5s)
-  &:hover
-    border-color: darken(#e7e7e7, 20%)
-  img
-    //max-width: 70%
-    height: 70%
-    margin: 15% auto
+.size-72
+  font-size: 72px
 
-hr
-  border-style: dashed !important
+.top-bar-right a:hover
+  background-color: transparentize($primary-color, 0.5)
+  color: $white
+
+.active
+  color: $white
+  background-color: $primary-color
+
+section
+  min-height: 900px
+  padding-top: 50px
+
+section:first-child
+  padding-top: 70px
+
+header
+  position: fixed
+  top: 0px
+  width: 100%
+  z-index: 1000
+  border-bottom: 10px lighten($primary-color, 20%) solid
