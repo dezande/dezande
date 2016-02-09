@@ -3,6 +3,7 @@
 @import variable
 
 footer
+  margin-top: 0 !important
   h2
     color: $white
     text-transform: uppercase
@@ -27,12 +28,16 @@ footer
   color: $white
   background-color: $primary-color
 
-section
+section, footer
   min-height: 900px
   padding-top: 50px
+  padding-bottom: 20px
 
 section:first-child
   padding-top: 70px
+
+section
+  border-top: 5px dotted $primary-color
 
 header
   position: fixed
@@ -40,3 +45,10 @@ header
   width: 100%
   z-index: 1000
   border-bottom: 10px lighten($primary-color, 20%) solid
+
+.vertical-middle
+  display: block
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
