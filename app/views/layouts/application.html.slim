@@ -5,30 +5,30 @@ html lang="fr"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
     title 
-      == content_for?(:title) ? "#{yield(:title)} - Vincent Cornière": "Vincent Cornière"
+      == content_for?(:title) ? "#{yield(:title)} - ": "" 
+      | Vincent Cornière
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
 
   body
     header 
-      .row.columns 
-        .top-bar
-          .top-bar-left
+      .top-bar
+        .top-bar-left
+          ul.menu
+            li
+              span.hide-for-medium data-responsive-toggle="responsive-menu" data-hide-for="medium"
+                span class="menu-icon dark" data-toggle=""
+            li  
+              = link_to root_path do
+                strong Vincent Cornière
+        #responsive-menu data-magellan=""
+          .top-bar-right
             ul.menu
-              li
-                span.hide-for-medium data-responsive-toggle="responsive-menu" data-hide-for="medium"
-                  span class="menu-icon dark" data-toggle=""
-              li  
-                = link_to root_path do
-                  strong Vincent Cornière
-          #responsive-menu data-magellan=""
-            .top-bar-right
-              ul.menu
-                li = link_to "Accueil", "#whoiam"
-                li = link_to "Compétances", "#skills"
-                li = link_to "Expériences professionnelles", "#career"
-                li = link_to "Contact", "#contact"
+              li = link_to "Accueil", "#whoiam"
+              li = link_to "Expériences professionnelles", "#career"
+              li = link_to "Mes centre d'intérêt", "#hobbies"
+              li = link_to "Contact", "#contact"
     
     == yield
     footer#contact data-magellan-target="contact"
@@ -55,7 +55,7 @@ html lang="fr"
             .stat
               i.fi-social-github.size-72
             | GitHub
-      .row.small-up-1.medium-up-3.text-center
+      .row.small-up-1.medium-up-2.text-center
         .columns
           = link_to "/cv-vincent-corniere.pdf", target: "_blank" do
             .stat
