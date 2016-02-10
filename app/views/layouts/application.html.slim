@@ -30,11 +30,11 @@ html lang="fr"
               li = link_to "Expériences professionnelles", "#career"
               li = link_to "Mes centre d'intérêt", "#hobbies"
               li = link_to "Contact", "#contact"
-    - if notice ?
+    - if notice
       .success.callout
         p.notice = notice
     
-    - if alert ?
+    - if alert
       .alert.callout
         p.alert = alert
     
