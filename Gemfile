@@ -5,6 +5,11 @@ ruby '2.2.1'
 gem 'rails', '4.2.2'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# devise
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 # database
 gem 'mongoid', '~> 5.1.0'
 
