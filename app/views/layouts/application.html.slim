@@ -31,12 +31,14 @@ html lang="fr"
               li = link_to "Mes centre d'intérêt", "#hobbies"
               li = link_to "Contact", "#contact"
     - if notice
-      .success.callout
-        p.notice = notice
+      section.row.columns.message
+        .success.callout
+          p.notice = notice
     
     - if alert
-      .alert.callout
-        p.alert = alert
+      section.row.columns.message
+        .alert.callout
+          p = alert
     
     == yield
     footer#contact data-magellan-target="contact"

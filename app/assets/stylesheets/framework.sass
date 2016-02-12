@@ -6,9 +6,9 @@
 
 @keyframes pendule
   from
-    +transform(rotate(-45deg))
+    +transform(rotate(-5deg))
   to
-    +transform(rotate(+45deg))
+    +transform(rotate(+5deg))
 
 .framework-icons
   margin: 20px auto
@@ -53,9 +53,6 @@
   padding-top: 15px
   .columns
     animation: pendule 4s ease-in-out 0s infinite alternate
-    +transition(transform 0.5s)
-    +transform(rotate(-45deg))
-    -webkit-transition: -webkit-transform 0.5s
 
   .columns:nth-child(even)
     animation: pendule 2s ease-in-out 0s infinite alternate
