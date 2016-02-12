@@ -12,13 +12,14 @@ gem 'devise-i18n-views'
 
 # database
 gem 'mongoid', '~> 5.1.0'
+gem 'bson_ext'
 
 # Html
 gem 'slim'
 
 # css and js
 gem 'sass-rails', '~> 5.0'
-
+gem 'angularjs-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
