@@ -14,8 +14,8 @@ class SkillTest < ActiveSupport::TestCase
   end
 
   test "name should be unique" do
-      @s.save
-      r = Skill.new(name: "Ruby", color: "red")
-      assert_not r.valid?
+    @s.save
+    r = Skill.new(name: "Ruby", color: "red")
+    assert_not r.valid?
   end
 end
