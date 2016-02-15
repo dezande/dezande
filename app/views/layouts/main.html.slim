@@ -1,0 +1,30 @@
+doctype html
+html lang="fr"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title 
+      == content_for?(:title) ? "#{yield(:title)} - ": "" 
+      | Vincent Cornière
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tag
+
+  body
+    header
+      .top-bar
+        .top-bar-left
+          ul.menu
+            li = link_to "Vincent Cornière", user_root_path
+            
+        .top-bar-right
+          ul.menu
+            li = link_to "Se deconnecter", destroy_user_session_path, method: :delete
+    nav.small-1.columns.text-center.nav_user.margin_user
+      = link_to user_root_path do 
+        .stat
+          i.fi-home
+        | Home
+    article.small-11.columns.margin_user
+      == yield
