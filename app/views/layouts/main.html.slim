@@ -1,16 +1,6 @@
 doctype html
 html lang="fr"
-  head
-    meta charset="utf-8"
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-
-    title 
-      == content_for?(:title) ? "#{yield(:title)} - ": "" 
-      | Vincent Cornière
-    = stylesheet_link_tag "application"
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = csrf_meta_tag
-
+  = render "layouts/head"
   body
     header
       .top-bar
@@ -26,5 +16,11 @@ html lang="fr"
         .stat
           i.fi-home
         | Home
+      = link_to user_skills_path do 
+        .stat
+          i.fi-clipboard-notes
+        | Home
     article.small-11.columns.margin_user
+      = render partial: "layouts/alert"
+    
       == yield

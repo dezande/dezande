@@ -32,6 +32,7 @@ gem 'foundation-icons-sass-rails'
 
 group :test do
   gem 'shoulda'
+  gem 'minitest-reporters'
 end
 
 group :development do

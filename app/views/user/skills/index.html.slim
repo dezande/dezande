@@ -1,0 +1,20 @@
+h1 Les compétences
+
+= link_to "Ajouter une compétence", new_user_skill_path, class: "success button"
+
+table
+  theader
+    tr
+      th Nom
+      th Couleur
+      th
+  tbody
+    - @skills.each do |skill|
+      tr
+        td = skill.name
+        td = skill.color
+        td
+          = link_to edit_user_skill_path(skill), class: "success button" do
+            i.fi-page-edit
+          = link_to user_skill_path(skill), method: :delete, class: "alert button" do
+            i.fi-page-delete

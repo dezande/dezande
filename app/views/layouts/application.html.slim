@@ -1,16 +1,6 @@
 doctype html
 html lang="fr"
-  head
-    meta charset="utf-8"
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-
-    title 
-      == content_for?(:title) ? "#{yield(:title)} - ": "" 
-      | Vincent Cornière
-    = stylesheet_link_tag "application"
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = csrf_meta_tag
-
+  = render partial: "layouts/head"
   body
     header 
       .top-bar
@@ -30,15 +20,8 @@ html lang="fr"
               li = link_to "Expériences professionnelles", "#career"
               li = link_to "Mes centre d'intérêt", "#hobbies"
               li = link_to "Contact", "#contact"
-    - if notice
-      section.row.columns.message
-        .success.callout
-          p.notice = notice
-    
-    - if alert
-      section.row.columns.message
-        .alert.callout
-          p = alert
+              
+    = render partial: "layouts/alert"
     
     == yield
     footer#contact data-magellan-target="contact"
