@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.1'
 
 gem 'rails', '4.2.2'
+gem 'rails-i18n', '~> 4.0.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # devise

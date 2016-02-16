@@ -21,3 +21,8 @@
 
 fr:
   hello: "Bonjour monde"
+  mongoid:
+    attributes:
+      skill:
+        name: nom
+        color: couleur

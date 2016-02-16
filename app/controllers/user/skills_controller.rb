@@ -1,6 +1,6 @@
 class User::SkillsController < ApplicationController
   layout "main"
-  before_action :skills_find, only: [:edit, :update, :destroy]
+  before_action :skills_find, except: [:index, :new, :create]
 
   def index
     @skills = Skill.all
@@ -16,7 +16,8 @@ class User::SkillsController < ApplicationController
      if @skill.save
        redirect_to :user_skills
      else
-       render :new
+       puts @skill.errors.full_messages
+       render 'new'
      end
   end
 
@@ -39,10 +40,22 @@ class User::SkillsController < ApplicationController
     end
   end
 
+  def toggle_view
+    @skill.view = !@skill.view
+    @skill.save
+    redirect_to :user_skills
+  end
+
+  def toggle_priority
+    @skill.priority = !@skill.priority
+    @skill.save
+    redirect_to :user_skills
+  end
+
   private
 
   def skills_params
-    params.require(:skill).permit(:name, :color)
+    params.require(:skill).permit(:name, :color, :view, :priority)
   end
 
   def skills_find
