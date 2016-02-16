@@ -135,11 +135,9 @@ production:
       database: dezande_staging
       hosts:
         - localhost:27017
+      user: 'dezande_staging'
+      password: 'hpq26TdG4pLrF7Z7Fv85'
       options:
-        # The name of the user for authentication.
-        user: 'dezande_staging'
-        # The password of the user for authentication.
-        password: 'hpq26TdG4pLrF7Z7Fv85'
         read:
           mode: :primary
         max_pool_size: 1
