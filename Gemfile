@@ -42,6 +42,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
   gem 'capistrano-nc', '~> 0.1'
+  gem 'capistrano-rails-console'
   gem 'web-console', '~> 2.0'
 end
 
