@@ -1,4 +1,4 @@
-class User::SkillsController < ApplicationController
+class User::SkillsController < User::UserController
   layout "main"
   before_action :skills_find, except: [:index, :new, :create]
 

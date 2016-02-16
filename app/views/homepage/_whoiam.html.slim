@@ -21,29 +21,11 @@
 .row.columns.text-center
   h3 Compétences
   .row.small-up-2.medium-up-5.large-up-6.text-center.skills
-    .columns
-      .skills-icons-ruby Ruby
-    .columns
-      .skills-icons-javascript JavaScript
-    .columns
-      .skills-icons-php PHP
-    .columns
-      .skills-icons-git Git
-    .columns 
-      .skills-icons-sql SQL
-    .columns 
-      .skills-icons-html HTML
-    .columns 
-      .skills-icons-css CSS
-    .columns 
-      .skills-icons-xml XML 
-    .columns 
-      .skills-icons-mongodb MongoDB
-    .columns 
-      .skills-icons-markdown Markdown
-    .columns 
-      .skills-icons-ajax Ajax    
-      
+    - @skills.each do |skill|
+      .columns
+        .skills-icons(style="background-color: ##{skill.color};") = skill.name
+
+
   h3 Framework / Librairies / CMS
   .row.small-up-2.medium-up-3.large-up-4.text-center.framework
     .columns
