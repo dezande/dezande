@@ -132,7 +132,7 @@ test:
 production:
   clients:
     default:
-      database: dezande_staging
+      database: dezandeStaging
       hosts:
         - localhost:27017
       options:
