@@ -15,7 +15,7 @@ require 'mongoid'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Mongoid.load!(File.expand_path('mongoid.yml', './config'))
+Mongoid.load!("path/to/your/mongoid.yml", :production)
 
 
 module Dezande
@@ -36,5 +36,9 @@ module Dezande
     require "i18n/backend/fallbacks"
     I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
     config.i18n.fallbacks = {'fr' => 'en'}
+
+    config.generators do |g|
+      g.orm :mongoid
+    end
   end
 end
