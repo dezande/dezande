@@ -138,3 +138,12 @@ production:
       options:
         user: 'dezandeStaging'
         password: 'hpq26TdG4pLrF7Z7Fv85'
+staging:
+  clients:
+    default:
+      database: dezande_staging
+      hosts:
+        - localhost:27017
+      options:
+        user: 'dezandeStaging'
+        password: 'hpq26TdG4pLrF7Z7Fv85'
