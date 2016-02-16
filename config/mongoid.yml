@@ -135,9 +135,6 @@ production:
       database: dezande_staging
       hosts:
         - localhost:27017
-      user: 'dezande_staging'
-      password: 'hpq26TdG4pLrF7Z7Fv85'
       options:
-        read:
-          mode: :primary
-        max_pool_size: 1
+        user: 'dezande_staging'
+        password: 'hpq26TdG4pLrF7Z7Fv85'
