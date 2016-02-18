@@ -26,3 +26,4 @@ fr:
       skill:
         name: nom
         color: couleur
+        devicon: class devicon

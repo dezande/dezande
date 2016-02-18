@@ -30,6 +30,7 @@ gem 'foundation-rails'
 
 # Font
 gem 'foundation-icons-sass-rails'
+gem 'devicon-rails'
 
 group :test do
   gem 'shoulda'

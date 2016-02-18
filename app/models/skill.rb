@@ -4,6 +4,7 @@ class Skill
   # Field
   field :name,      type: String
   field :color,     type: String
+  field :devicon,   type: String,  default: ""
   field :view,      type: Boolean
   field :priority,  type: Boolean
 
