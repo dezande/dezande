@@ -13,7 +13,10 @@ table
   tbody.text-center
     - @skills.each do |skill|
       tr
-        td = skill.name
+        td 
+          = skill.name
+          .stat
+            i(class="devicon-#{skill.devicon}")
         td 
           | #
           = skill.color

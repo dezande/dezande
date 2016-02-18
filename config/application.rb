@@ -10,10 +10,13 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require 'mongoid'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Mongoid.load!("config/mongoid.yml", :production)
+
 
 module Dezande
   class Application < Rails::Application
@@ -28,5 +31,14 @@ module Dezande
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :fr
+
+    # Configure fallbacks for mongoid errors:
+    require "i18n/backend/fallbacks"
+    I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
+    config.i18n.fallbacks = {'fr' => 'en'}
+
+    config.generators do |g|
+      g.orm :mongoid
+    end
   end
 end

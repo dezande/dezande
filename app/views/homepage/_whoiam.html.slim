@@ -23,7 +23,10 @@
   .row.small-up-2.medium-up-5.large-up-6.text-center.skills
     - @skills.each do |skill|
       .columns
-        .skills-icons(style="background-color: ##{skill.color};") = skill.name
+        .skills-icons(style="background-color: ##{skill.color};")
+          .stat
+            i(class="devicon-#{skill.devicon}")
+          = skill.name
 
 
   h3 Framework / Librairies / CMS

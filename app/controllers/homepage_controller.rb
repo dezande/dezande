@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
   def index
-    @skills = Skill.all
+    @skills = Skill.where(view: true)
   end
 end

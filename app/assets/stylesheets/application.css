@@ -12,6 +12,8 @@
  *
  *= require foundation-icons
  *= require foundation_and_overrides
+ *= require devicon
+ *= require devicon-colors
  *= require_tree .
  *= require_self
  */
