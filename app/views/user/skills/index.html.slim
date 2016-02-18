@@ -5,8 +5,7 @@ h1 Les compétences
 table
   theader
     tr
-      th Nom
-      th Couleur
+      th Visuelle
       th Voir
       th Prioriter
       th Option
@@ -14,13 +13,11 @@ table
     - @skills.each do |skill|
       tr
         td 
-          = skill.name
-          .stat
-            i(class="devicon-#{skill.devicon}")
-        td 
-          | #
-          = skill.color
-          .views-color(style="background-color: ##{skill.color};")
+          .columns
+            .skills-icons(style="background-color: ##{skill.color};")
+              .stat
+                i(class="devicon-#{skill.devicon}")
+              = skill.name
         td 
           = link_to user_skill_toggle_view_path(skill), class: "#{check_class(skill.view)} button" do
             i(class="#{check_icons(skill.view)}")
