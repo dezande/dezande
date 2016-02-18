@@ -20,35 +20,11 @@
 
 .row.columns.text-center
   h3 Compétences
-  .row.small-up-2.medium-up-5.large-up-6.text-center.skills
-    - @skills.each do |skill|
-      .columns
-        .skills-icons(style="background-color: ##{skill.color};")
-          .stat
-            i(class="devicon-#{skill.devicon}")
-          = skill.name
-
+  #competences.skills.owl-carousel
+    - @skills_language.each do |skill|
+      div = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }
 
   h3 Framework / Librairies / CMS
-  .row.small-up-2.medium-up-3.large-up-4.text-center.framework
-    .columns
-      .framework-icons-rails
-        .vertical-middle Ruby on Rails
-    .columns
-      .framework-icons-symfony
-        .vertical-middle Symfony
-    .columns
-      .framework-icons-bootstrap
-        .vertical-middle Bootstrap
-    .columns
-      .framework-icons-foundation 
-        .vertical-middle Foundation
-    .columns 
-      .framework-icons-drupal
-        .vertical-middle Drupal
-    .columns 
-      .framework-icons-wordpress
-        .vertical-middle Wordpress
-    .columns 
-      .framework-icons-jquery
-        .vertical-middle JQuery
+  #framework.skills.owl-carousel
+    - @skills_other.each do |skill|
+      = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }

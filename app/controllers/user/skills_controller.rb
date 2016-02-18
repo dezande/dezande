@@ -55,7 +55,7 @@ class User::SkillsController < User::UserController
   private
 
   def skills_params
-    params.require(:skill).permit(:name, :color, :view, :priority, :devicon)
+    params.require(:skill).permit(:name, :color, :view, :priority, :devicon, :type)
   end
 
   def skills_find

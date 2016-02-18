@@ -5,30 +5,21 @@ h1 Les compétences
 table
   theader
     tr
-      th Nom
-      th Couleur
-      th Voir
-      th Prioriter
+      th Visuelle
+      th Type
+      th Voir ?
       th Option
   tbody.text-center
     - @skills.each do |skill|
       tr
         td 
-          = skill.name
-          .stat
-            i(class="devicon-#{skill.devicon}")
-        td 
-          | #
-          = skill.color
-          .views-color(style="background-color: ##{skill.color};")
+          = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }
+        td = t(skill.type).capitalize
         td 
           = link_to user_skill_toggle_view_path(skill), class: "#{check_class(skill.view)} button" do
             i(class="#{check_icons(skill.view)}")
-        td 
-          = link_to user_skill_toggle_priority_path(skill), class: "#{check_class(skill.priority)} button" do
-            i(class="#{check_icons(skill.priority)}")
         td
-          .button-group.text-center
+          .text-center
             = link_to edit_user_skill_path(skill), class: "success button" do
               i.fi-page-edit
             = link_to user_skill_path(skill), method: :delete, class: "alert button", data: { confirm: 'Etes vous sure ?' } do
