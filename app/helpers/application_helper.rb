@@ -1,5 +1,9 @@
 module ApplicationHelper
-  def active_class(link_path)
-    current_page?(link_path) ? "active" : ""
+  def check_icons(bool)
+    bool ? "fi-check" : "fi-x"
+  end
+
+  def check_class(bool)
+    bool ? "success" : "alert"
   end
 end

@@ -5,54 +5,10 @@
 .skills-icons
   margin: 10px auto
   width: 150px
-  height: 70px
+  height: 100px
   font-size: 1.5rem
   color: $white
   padding-top: 15px
-
-.skills-icons-ruby
-  @extend .skills-icons
-  background-color: $ruby
-
-.skills-icons-javascript
-  @extend .skills-icons
-  background-color: $javascript
-
-.skills-icons-php
-  @extend .skills-icons
-  background-color: $php
-
-.skills-icons-git
-  @extend .skills-icons
-  background-color: $git
-
-.skills-icons-sql
-  @extend .skills-icons
-  background-color: $sql
-
-.skills-icons-html
-  @extend .skills-icons
-  background-color: $html
-
-.skills-icons-css
-  @extend .skills-icons
-  background-color: $css
-
-.skills-icons-xml
-  @extend .skills-icons
-  background-color: $xml
-
-.skills-icons-mongodb
-  @extend .skills-icons
-  background-color: $mongodb
-
-.skills-icons-markdown
-  @extend .skills-icons
-  background-color: $markdown
-
-.skills-icons-ajax
-  @extend .skills-icons
-  background-color: $ajax
 
 .skills
   overflow: hidden
@@ -62,32 +18,38 @@
     +transform(rotate(-2deg))
     +transition(transform 0.3s)
     -webkit-transition: -webkit-transform 0.3s
-
+    position: relative
+    z-index: 1
   .columns:nth-child(even)
     +transform(rotate(3deg))
-
+    position: relative
+    z-index: 2
   .columns:nth-child(3n)
     +transform(none)
     position: relative
     top: -5px
+    z-index: 3
 
   .columns:nth-child(5n)
     +transform(rotate(5deg))
     position: relative
     right: 5px
+    z-index: 5
 
   .columns:nth-child(8n)
     +transform(rotate(2deg))
     position: relative
     top: 8px
     right: 5px
+    z-index: 8
 
   .columns:nth-child(11n)
     position: relative
     top: 3px
     left: -5px
+    z-index: 11
 
   .columns:hover
     +transform(scale(1.25))
     position: relative
-    z-index: 5
+    z-index: 12

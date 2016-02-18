@@ -1,0 +1,38 @@
+- if @skill.errors.any?
+  #error_explanation
+    .alert.callout
+      | Le formulaire contient 
+      = pluralize(@skill.errors.count, "erreur")
+      | .
+    ul
+      - @skill.errors.full_messages.each do |msg|
+        li = msg
+
+
+= form_for [:user, @skill] do |f|
+  .row
+    .small-1.columns
+      = f.label :name, class: "text-right middle"
+    .small-11.columns
+      = f.text_field :name
+
+  .row
+    .small-1.columns
+      = f.label :color, class: "text-right middle"
+    .small-11.columns
+      = f.text_field :color
+  
+  .row
+    .small-1.columns
+      = f.label :devicon, class: "text-right middle"
+    .small-11.columns
+      = f.text_field :devicon
+  
+  .row.columns
+    = f.check_box :view
+    = f.label :view
+  
+    = f.check_box :priority
+    = f.label :priority
+  .row
+    = f.submit "valider", class: "small expanded button"
