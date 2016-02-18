@@ -27,3 +27,9 @@ fr:
         name: nom
         color: couleur
         devicon: class devicon
+        type: type
+
+  language: Langage
+  framework: Framework
+  cms: CMS
+  library: Librairie

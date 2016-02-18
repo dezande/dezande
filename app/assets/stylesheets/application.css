@@ -14,6 +14,8 @@
  *= require foundation_and_overrides
  *= require devicon
  *= require devicon-colors
+ *= require owl.carousel
+ *= require owl.theme
  *= require_tree .
  *= require_self
  */

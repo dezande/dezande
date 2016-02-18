@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'foundation-rails'
+gem 'owlcarousel-rails'
 
 # Font
 gem 'foundation-icons-sass-rails'

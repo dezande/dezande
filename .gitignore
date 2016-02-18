@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+/help_doc

@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  mongoid:
+    attributes:
+      skill:
+        name: name
+        color: color
+        devicon: class devicon
+        type: type

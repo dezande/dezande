@@ -1,12 +1,16 @@
 class Skill
   include Mongoid::Document
+  include Mongoid::Timestamps
+
+  # Select
+  TYPES = %w(language framework cms library)
 
   # Field
   field :name,      type: String
   field :color,     type: String
-  field :devicon,   type: String,  default: ""
+  field :devicon,   type: String
+  field :type,      type: String,  default: "language"
   field :view,      type: Boolean
-  field :priority,  type: Boolean
 
   # Validates
   validates :name,  presence: true, uniqueness: true
@@ -14,4 +18,17 @@ class Skill
             with: /\A\h{6}\z/,
             message: "n'est pas au format hexa sans le #. Par exemple, 458569."
   }
+  validates :type, inclusion: {
+            in: TYPES,
+            message: "Choisissez parmit ceux qui sont présenté."
+  }
+
+  # Fonction
+  def color_hex
+    "##{self.color}"
+  end
+
+  def devicon_class
+    "devicon-#{self.devicon}"
+  end
 end

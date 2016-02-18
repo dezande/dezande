@@ -4,9 +4,9 @@
       | Le formulaire contient 
       = pluralize(@skill.errors.count, "erreur")
       | .
-    ul
-      - @skill.errors.full_messages.each do |msg|
-        li = msg
+      ul
+        - @skill.errors.full_messages.each do |msg|
+          li = msg
 
 
 = form_for [:user, @skill] do |f|
@@ -27,12 +27,16 @@
       = f.label :devicon, class: "text-right middle"
     .small-11.columns
       = f.text_field :devicon
-  
-  .row.columns
-    = f.check_box :view
-    = f.label :view
-  
-    = f.check_box :priority
-    = f.label :priority
+      
   .row
+    .small-1.columns
+      = f.label :type, class: "text-right middle"
+    .small-11.columns
+      = f.select :type, Skill::TYPES.collect {|s| [I18n.t(s), s]}
+  
+  .row
+    .small-11.small-offset-1.columns
+      = f.check_box :view
+      = f.label :view
+  .row.columns
     = f.submit "valider", class: "small expanded button"
