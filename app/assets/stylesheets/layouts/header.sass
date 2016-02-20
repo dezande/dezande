@@ -1,0 +1,32 @@
+@import settings
+@import mixin
+
+.top-bar
+  @media screen and (max-width: map-get($breakpoints, medium))
+    padding: 5px
+    li
+      display: block
+  @media screen and (min-width: map-get($breakpoints, medium))
+    .menu
+      display: inline-block
+      position: relative
+      left: 50%
+      +transform(translateX(-50%))
+      margin-bottom: -6px
+
+header
+  position: fixed
+  top: 0px
+  width: 100%
+  z-index: 1000
+
+.top-bar a
+  color: lighten($primary-color, 30%)
+  text-transform: uppercase
+
+.top-bar a:hover
+  color: lighten($primary-color, 90%)
+
+.top-bar .active
+  border-bottom: solid 2px $white
+  color: $white

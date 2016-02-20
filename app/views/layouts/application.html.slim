@@ -4,22 +4,16 @@ html lang="fr"
   body
     header 
       .top-bar
-        .top-bar-left
-          ul.menu
-            li
-              span.hide-for-medium data-responsive-toggle="responsive-menu" data-hide-for="medium"
-                span class="menu-icon dark" data-toggle=""
-            li  
-              = link_to root_path do
-                strong Vincent Cornière
-            li.alert.hollow.button Version beta
+        span.hide-for-medium data-responsive-toggle="responsive-menu" data-hide-for="medium"
+          span.menu-icon.white data-toggle=""
         #responsive-menu data-magellan=""
-          .top-bar-right
-            ul.menu
-              li = link_to "Accueil", "#whoiam"
-              li = link_to "Expériences professionnelles", "#career"
-              li = link_to "Mes centre d'intérêt", "#hobbies"
-              li = link_to "Contact", "#contact"
+          ul.menu
+            li = link_to "Accueil",     "#whoiam"
+            li = link_to "Compétences", "#skills"
+            li = link_to "Travail",     "#job"
+            li = link_to "Formations",   "#education"
+            li = link_to "Loisirs",      "#hobbies"
+            li = link_to "Contact",     "#contact"
               
     = render partial: "layouts/alert"
     

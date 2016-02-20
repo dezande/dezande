@@ -24,6 +24,10 @@ require 'capistrano/rails/assets'
 require 'capistrano/passenger'
 require 'capistrano-nc/nc'
 require 'capistrano/console'
+require "airbrussh/capistrano"
+
+# Remove this
+set :format, :pretty
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

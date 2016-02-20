@@ -32,6 +32,7 @@ gem 'owlcarousel-rails'
 # Font
 gem 'foundation-icons-sass-rails'
 gem 'devicon-rails'
+gem "font-awesome-rails"
 
 group :test do
   gem 'shoulda'
@@ -45,6 +46,7 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-nc', '~> 0.1'
   gem 'capistrano-rails-console'
+  gem "airbrussh", :require => false
   gem 'web-console', '~> 2.0'
 end
 
