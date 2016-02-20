@@ -21,7 +21,11 @@ $(function(){ $(document).foundation(); });
 
 $(document).ready(function() {
 
-  $("#competences").owlCarousel();
-  $("#framework").owlCarousel();
+  $("#competences").owlCarousel({
+    items : 4
+  });
+  $("#framework").owlCarousel({
+    items : 4
+  });
 
 });

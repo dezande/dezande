@@ -11,7 +11,8 @@ section:first-child
   padding-top: $margin-menu
 
 .whoiam
-  margin-top: $margin-whoiam
+  padding-top: 70px
+  margin-top: 30px
 
 .profil
   width: $portrait
@@ -24,17 +25,19 @@ section:first-child
 .size-72
   font-size: 72px
 
-section .background
-  background-color: $white
-  box-shadow: 1px 1px 10px 1px #9b9b9b
-  margin-bottom: 20px
-  margin-top: 20px
-  padding-bottom: 10px
+section
+  padding-top: 15px
+  .background
+    background-color: $white
+    box-shadow: 1px 1px 10px 1px #9b9b9b
+    margin-bottom: 20px
+    margin-top: 20px
+    padding-bottom: 10px
+    padding-top: 10px
 
-
-footer
-  padding-top: 50px
-  padding-bottom: 20px
+  .background--contact
+    overflow: hidden
+    padding: 0
 
 .message
   min-height: 100px
@@ -54,3 +57,9 @@ footer
   background-color: #2980b9
   a
     color: white
+
+.bold
+  font-weight: bold
+
+.uppercase
+  text-transform: uppercase

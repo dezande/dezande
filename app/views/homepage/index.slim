@@ -25,7 +25,7 @@ section#education.education.row data-magellan-target="education"
     |  Formation
   .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
     .background    
-      = render partial: "homepage/career"
+      = render partial: "homepage/education"
 
 section#hobbies.hobbies.row data-magellan-target="hobbies"
   h2.text-center
@@ -33,3 +33,10 @@ section#hobbies.hobbies.row data-magellan-target="hobbies"
     |  Loisirs
   .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
     = render partial: "homepage/hobbies"
+        
+section#contact.contact.row data-magellan-target="contact"
+  h2.text-center
+    i.fa.fa-paper-plane-o
+    |  Me contacter
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    = render partial: "homepage/contact"
