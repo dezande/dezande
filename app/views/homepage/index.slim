@@ -1,8 +1,42 @@
-section#whoiam data-magellan-target="whoiam"
-  = render partial: "homepage/whoiam"
+section#whoiam.whoiam.row data-magellan-target="whoiam"
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    .background
+      = render partial: "homepage/whoiam"
 
-section#career.career data-magellan-target="career"
-  = render partial: "homepage/career"
+section#skills.skills.row data-magellan-target="skills"
+  h2.text-center
+    i.fa.fa-cogs
+    |  Compétences
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    .background
+      = render partial: "homepage/skills"
 
-section#hobbies.hobbies data-magellan-target="hobbies"
-  = render partial: "homepage/hobbies"
+section#job.job.row data-magellan-target="job"
+  h2.text-center
+    i.fa.fa-briefcase
+    |  Expèrience professionnel 
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    .background    
+      = render partial: "homepage/career"
+
+section#education.education.row data-magellan-target="education"
+  h2.text-center
+    i.fa.fa-book
+    |  Formation
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    .background    
+      = render partial: "homepage/education"
+
+section#hobbies.hobbies.row data-magellan-target="hobbies"
+  h2.text-center
+    i.fa.fa-book
+    |  Loisirs
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    = render partial: "homepage/hobbies"
+        
+section#contact.contact.row data-magellan-target="contact"
+  h2.text-center
+    i.fa.fa-paper-plane-o
+    |  Me contacter
+  .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
+    = render partial: "homepage/contact"

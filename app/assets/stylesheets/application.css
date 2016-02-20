@@ -12,10 +12,13 @@
  *
  *= require foundation-icons
  *= require foundation_and_overrides
+ *= require font-awesome
  *= require devicon
  *= require devicon-colors
  *= require owl.carousel
  *= require owl.theme
+ *= require layouts/header
+ *= require layouts/footer
  *= require_tree .
  *= require_self
  */

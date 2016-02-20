@@ -2,53 +2,46 @@
 @import mixin
 @import variable
 
-footer
-  margin-top: 0 !important
-  h2
-    color: $white
-    text-transform: uppercase
-  margin-top: 15px
-  border-top: 10px lighten($primary-color, 20%) solid
-  background-color: $primary-color
-  padding-top: 10px
-  padding-bottom: 10px
-  a
-    color: lighten($primary-color, 90%)
-  a:hover
-    color: lighten($primary-color, 30%)
+$portrait: 150px
+$half-portrait: $portrait / 2
+$margin-menu: 50px
+$margin-whoiam: $margin-menu + $half-portrait
+
+section:first-child
+  padding-top: $margin-menu
+
+.whoiam
+  padding-top: 70px
+  margin-top: 30px
+
+.profil
+  width: $portrait
+  border-radius: 50%
+  position: relative
+  left: 50%
+  top: - $half-portrait
+  +transform(translateX(-50%))
 
 .size-72
   font-size: 72px
 
-.top-bar-right a:hover
-  background-color: transparentize($primary-color, 0.5)
-  color: $white
+section
+  padding-top: 15px
+  .background
+    background-color: $white
+    box-shadow: 1px 1px 10px 1px #9b9b9b
+    margin-bottom: 20px
+    margin-top: 20px
+    padding-bottom: 10px
+    padding-top: 10px
 
-.top-bar.active
-  color: $white
-  background-color: $primary-color
-
-section, footer
-  min-height: 900px
-  padding-top: 50px
-  padding-bottom: 20px
-
-section:first-child
-  padding-top: 80px
+  .background--contact
+    overflow: hidden
+    padding: 0
 
 .message
   min-height: 100px
   padding-top: 80px
-
-section
-  border-top: 5px dotted $primary-color
-
-header
-  position: fixed
-  top: 0px
-  width: 100%
-  z-index: 1000
-  border-bottom: 10px lighten($primary-color, 20%) solid
 
 .vertical-middle
   display: block
@@ -65,8 +58,8 @@ header
   a
     color: white
 
-.views-color
-  width: 35px
-  height: 35px
-  display: inline-block
-  margin-left: 5%
+.bold
+  font-weight: bold
+
+.uppercase
+  text-transform: uppercase
