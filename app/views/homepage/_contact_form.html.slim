@@ -7,8 +7,8 @@
         .medium-6.columns
           = f.email_field :email, placeholder: "Adresse mail"
       .row.columns
-          = f.text_field :subject, placeholder: "sujet"
+          = f.text_field :subject, placeholder: "Sujet"
       .row.columns
-          = f.text_area :message
+          = f.text_area :message, rows: "5", placeholder: "Votre message ..."
 
       = f.submit "Envoyer", class: "expanded button"
