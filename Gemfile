@@ -49,6 +49,7 @@ group :development do
   gem 'capistrano-rails-console'
   gem "airbrussh", :require => false
   gem 'web-console', '~> 2.0'
+  gem "letter_opener"
 end
 
 group :development, :test do

@@ -1,0 +1,22 @@
+table border="0" style="width: 100%;"
+  tr
+    td Bonjour,
+  tr
+    td 
+      | Ceci est un message provenant du formulaire de contact de 
+      | vincent-corniere.fr. Voici les info provenance du formulaire
+  tr
+    td
+      strong style="padding-right: 10px;" Nom du contact:  
+      = @contact.name
+      br
+      strong style="padding-right: 10px;" Email du contact:
+      = @contact.email
+      br
+      strong style="padding-right: 10px;" Le sujet:
+      = @contact.subject
+      br
+      strong style="padding-right: 10px;" Le message: 
+      = @contact.message
+  tr
+    td Fin du message 
