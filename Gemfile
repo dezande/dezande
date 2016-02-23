@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.5.1'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem "minitest-rails"
 
 # devise
 gem 'devise'
@@ -48,6 +49,7 @@ group :development do
   gem 'capistrano-rails-console'
   gem "airbrussh", :require => false
   gem 'web-console', '~> 2.0'
+  gem "letter_opener"
 end
 
 group :development, :test do

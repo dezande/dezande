@@ -1,0 +1,75 @@
+<html>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="viewport" content="width=device-width"/>
+     <style type="text/css">
+        body, table {
+          width: 100%;
+        }
+        table {
+          border-collapse: collapse;
+        }
+        .header {
+          height: 40px;
+          background-color: #2980b9;
+          text-align: center;
+        }
+        .header a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #fefefe;
+        }
+        .footer {
+          height: 40px;
+          text-align: center;
+          background-color: #ECF0F1;
+        }
+        .footer a {
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        .section {
+          background-color: #ECF0F1;
+        }
+        .background {
+            background-color: #fefefe;
+            box-shadow: 1px 1px 10px 1px #9b9b9b;
+            padding: 10px 10px;
+        }
+     </style>
+ </head>
+  <body>
+    <table border="0" style="width:100%">
+      <tr class="header">
+        <td>
+          <%= link_to "Vincent Cornière", "http://vincent-corniere.fr" %>
+        </td>
+      </tr>
+      <tr class="section">
+        <td>
+          <table border="0" style="width: 90%;margin: 10px auto;">
+            <tr>
+              <td class="background">
+                <%= yield %>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="footer">
+        <td>
+          <table border="0" style="width: 90%;margin: 10px auto;">
+            <tr>
+              <td>
+                <small>
+                  Cet email est envoyer automatiquement depuis le
+                  site vincent-corniere.fr. Merci de ne pas répondre à ce message.
+                </small>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

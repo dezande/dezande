@@ -9,7 +9,7 @@ class Skill
   field :name,      type: String
   field :color,     type: String
   field :devicon,   type: String
-  field :type,      type: String,  default: "language"
+  field :type,      type: String
   field :view,      type: Boolean
 
   # Validates
@@ -22,6 +22,8 @@ class Skill
             in: TYPES,
             message: "Choisissez parmit ceux qui sont présenté."
   }
+  validates :devicon,  presence: true, uniqueness: true
+
 
   # Fonction
   def color_hex
