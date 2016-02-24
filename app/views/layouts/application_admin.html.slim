@@ -1,0 +1,37 @@
+doctype html
+html lang="fr"
+  = render "layouts/head"
+  body ng-app="adminDezande"
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner data-off-canvas-wrapper=""
+        / Toggle button
+        .title-bar
+          .title-bar-left
+            button.menu-icon type="button" data-open="offCanvasLeft"
+            span.title-bar-title Vincent Cornière
+        
+          .title-bar-right
+            = link_to "Se deconnecter", destroy_user_session_path, method: :delete
+            
+        / Offcanva menu left
+        #offCanvasLeft.off-canvas.position-left data-off-canvas=""
+          ul.menu.vertical
+            li 
+              = link_to user_root_path do
+                i.fa.fa-tachometer
+                |  Bureau
+            li
+              ul.accordion data-accordion="" data-allow-all-closed="true"
+                li.accordion-item data-accordion-item=""
+                  a.accordion-title 
+                    i.fa.fa-cogs
+                    |  Compétence
+                  .accordion-content data-tab-content=""
+                    ul.vertical.menu
+                      li = link_to "Voir", user_root_path + "#/skills"
+                      li = link_to "Nouveau", user_root_path + "#/skills/new"
+
+        .off-canvas-content data-off-canvas-content=""
+          = render partial: "layouts/alert"
+      
+          == yield
