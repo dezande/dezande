@@ -1,6 +1,4 @@
 class User::HomepageController < User::UserController
-  layout "main"
-
   # GET /user
   def index
     @count_skill = {
