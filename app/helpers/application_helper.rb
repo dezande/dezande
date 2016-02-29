@@ -6,4 +6,8 @@ module ApplicationHelper
   def check_class(bool)
     bool ? "success" : "alert"
   end
+
+  def age
+    Date.new(1986, 11, 11).find_age
+  end
 end

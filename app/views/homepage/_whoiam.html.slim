@@ -1,6 +1,6 @@
 = image_tag "homepage/profile_picture_square.jpg", class: "profil"
 .row.column.text-center
-  h1 
+  h1.h1-portrait
     | Vincent Cornière
     br
     small Dévellopeur Web
@@ -8,11 +8,12 @@
   .row
     .small-10.small-offset-1.end
       p.text-center
-        | Ideoque fertur neminem aliquando ob haec vel similia poenae addictum 
-        | oblato de more elogio revocari iussisse, quod inexorabiles quoque 
-        | principes factitarunt. et exitiale hoc vitium, quod in aliis non 
-        | numquam intepescit, in illo aetatis progressu effervescebat, 
-        | obstinatum eius propositum accendente adulatorum cohorte.
+        | Je m'appelle Vincent Cornière. 
+        | Je suis dévellopeur web spécialisé en Ruby On Rails. 
+        = "J'ai #{age} ans. " 
+        | Je vis au Raincy en Île-de-France prés de Paris.
+        br
+        | Je recherche à l'heure actuelle un poste en temps que dévellopeur web.
         
   .row.small-up-1.medium-up-2.large-up-2.text-center
     .columns = link_to "Télécharger mon CV", "/cv-vincent-corniere.pdf", target: "_blank", class: "button"
