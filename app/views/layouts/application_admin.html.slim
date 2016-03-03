@@ -1,26 +1,37 @@
 doctype html
 html lang="fr"
   = render "layouts/head"
-  body
-    header
-      .top-bar
-        .top-bar-left
-          ul.menu
-            li = link_to "Vincent Cornière", user_root_path
+  body ng-app="adminDezande"
+    .off-canvas-wrapper
+      header
+        .title-bar
+          .title-bar-left
+            button.menu-icon type="button" data-toggle="offCanvasLeft"
+            span.title-bar-title = link_to " Vincent Cornière", link_ng_admin
+          / .title-bar-right
+          /   button.menu-icon type="button" data-toggle="offCanvasRight"
+    .off-canvas-wrapper-inner data-off-canvas-wrapper=""
+      .off-canvas.position-left  id="offCanvasLeft" data-off-canvas=""
+        nav.text-center.nav_user.margin_user
+          ul.menu.vertical
+            li = link_to link_ng_admin do 
+              .stat
+                i.fi-home
+              | Accueil
+            li = link_to link_ng_admin("skills") do 
+              .stat
+                i.fi-clipboard-notes
+              | Compétences
             
-        .top-bar-right
-          ul.menu
-            li = link_to "Se deconnecter", destroy_user_session_path, method: :delete
-    nav.small-1.columns.text-center.nav_user.margin_user
-      = link_to user_root_path do 
-        .stat
-          i.fi-home
-        | Accueil
-      = link_to user_skills_path do 
-        .stat
-          i.fi-clipboard-notes
-        | Compétences
-    article.small-11.columns.margin_user
-      = render partial: "layouts/alert"
-    
-      == yield
+            li = link_to destroy_user_session_path, method: :delete do
+              .stat
+                i.fa.fa-power-off
+              | Se deconnecter
+      / .off-canvas.position-right id="offCanvasRight" data-off-canvas="" data-position="right"
+      /   nav.text-center.nav_user.margin_user
+      /     = link_to "Se deconnecter", destroy_user_session_path, method: :delete
+
+      .off-canvas-content.content-admin data-off-canvas-content=""
+        .margin_user
+          .row.columns
+            == yield
