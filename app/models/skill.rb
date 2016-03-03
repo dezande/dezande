@@ -2,17 +2,14 @@ class Skill
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  # Select
   TYPES = %w(language framework cms library)
 
-  # Field
   field :name,      type: String
   field :color,     type: String
   field :devicon,   type: String
   field :type,      type: String
   field :view,      type: Boolean
 
-  # Validates
   validates :name,  presence: true, uniqueness: true
   validates :color, presence: true, format: {
             with: /\A\h{6}\z/,
@@ -25,7 +22,6 @@ class Skill
   validates :devicon,  presence: true, uniqueness: true
 
 
-  # Fonction
   def color_hex
     "##{self.color}"
   end
