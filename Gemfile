@@ -16,6 +16,11 @@ gem 'devise-i18n-views'
 # database
 gem 'mongoid', '~> 5.1.0'
 gem 'bson_ext'
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
+
 
 # Html
 gem 'slim'

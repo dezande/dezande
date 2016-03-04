@@ -1,3 +1,4 @@
-database: mongod
-redis:    redis-server
-web:      rails server
+mongodb:    mongod
+redis:      redis-server
+redis-info: redis-cli monitor
+web:        rails server

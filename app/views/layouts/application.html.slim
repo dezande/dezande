@@ -1,30 +1,31 @@
-doctype html
-html lang="fr"
-  = render partial: "layouts/head"
-  body
-    header 
-      .top-bar
-        span.hide-for-medium data-responsive-toggle="responsive-menu" data-hide-for="medium"
-          span.menu-icon.white data-toggle=""
-        #responsive-menu data-magellan=""
-          ul.menu
-            li = link_to "Accueil",     "#whoiam"
-            li = link_to "Compétences", "#skills"
-            li = link_to "Travail",     "#job"
-            li = link_to "Formations",   "#education"
-            li = link_to "Loisirs",      "#hobbies"
-            li = link_to "Contact",     "#contact"
-              
-    = render partial: "layouts/alert"
-    
-    == yield
-    footer
-      .row.small-up-1.medium-up-2.text-center
-        .columns
-          = link_to "/cv-vincent-corniere.pdf", target: "_blank" do
-            i.fa.fa-file-pdf-o.fa-2x
-            |  Mon cv en pdf
-        .columns
-          = link_to "https://github.com/dezande/dezande", target: "_blank" do
-            i.fa.fa-github.fa-2x
-            |  Le code source du site
+- cache do
+  doctype html
+  html lang="fr"
+    = render partial: "layouts/head"
+    body
+      header 
+        .top-bar
+          span.hide-for-medium data-responsive-toggle="responsive-menu" data-hide-for="medium"
+            span.menu-icon.white data-toggle=""
+          #responsive-menu data-magellan=""
+            ul.menu
+              li = link_to "Accueil",     "#whoiam"
+              li = link_to "Compétences", "#skills"
+              li = link_to "Travail",     "#job"
+              li = link_to "Formations",   "#education"
+              li = link_to "Loisirs",      "#hobbies"
+              li = link_to "Contact",     "#contact"
+                
+      = render partial: "layouts/alert"
+      
+      == yield
+      footer
+        .row.small-up-1.medium-up-2.text-center
+          .columns
+            = link_to "/cv-vincent-corniere.pdf", target: "_blank" do
+              i.fa.fa-file-pdf-o.fa-2x
+              |  Mon cv en pdf
+          .columns
+            = link_to "https://github.com/dezande/dezande", target: "_blank" do
+              i.fa.fa-github.fa-2x
+              |  Le code source du site
