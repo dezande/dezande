@@ -1,10 +1,12 @@
-.text-center
-  h3 Language
-  #competences.skill.owl-carousel
-    - @skills_language.each do |skill|
-      div = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }
+- cache do
 
-  h3 Framework / Librairies / CMS
-  #framework.skill.owl-carousel
-    - @skills_other.each do |skill|
-      = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }
+  .text-center
+    h3 Language
+    #competences.skill.owl-carousel
+      - @skills_language.each do |skill|
+        div = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }
+
+    h3 Framework / Librairies / CMS
+    #framework.skill.owl-carousel
+      - @skills_other.each do |skill|
+        = render partial: "partials/skyll_icons", locals: { name: skill.name, devicon_class: skill.devicon_class, color_hex: skill.color_hex }

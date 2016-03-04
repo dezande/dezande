@@ -51,6 +51,7 @@ group :development do
   gem "airbrussh", :require => false
   gem 'web-console', '~> 2.0'
   gem "letter_opener"
+  gem "foreman"
 end
 
 group :development, :test do

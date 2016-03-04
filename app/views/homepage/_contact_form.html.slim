@@ -1,12 +1,13 @@
-= form_for(@contact, url: homepage_index_path, method: "post") do |f|
-  .row
-    .medium-6.columns
-      = f.text_field :name, placeholder: "Nom et prénom"
-    .medium-6.columns
-      = f.email_field :email, placeholder: "Adresse mail"
-  .row.columns
-      = f.text_field :subject, placeholder: "Sujet"
-  .row.columns
-      = f.text_area :message, rows: "5", placeholder: "Votre message ..."
+- cache do
+  = form_for(@contact, url: homepage_index_path, method: "post") do |f|
+    .row
+      .medium-6.columns
+        = f.text_field :name, placeholder: "Nom et prénom"
+      .medium-6.columns
+        = f.email_field :email, placeholder: "Adresse mail"
+    .row.columns
+        = f.text_field :subject, placeholder: "Sujet"
+    .row.columns
+        = f.text_area :message, rows: "5", placeholder: "Votre message ..."
 
-  = f.submit "Envoyer", class: "expanded button"
+    = f.submit "Envoyer", class: "expanded button"

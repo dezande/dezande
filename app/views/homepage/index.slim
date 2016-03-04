@@ -1,36 +1,38 @@
-section#whoiam.whoiam.row.columns data-magellan-target="whoiam"
-  .background
-    = render partial: "homepage/whoiam"
+- cache do
 
-section#skills.skills.row.columns data-magellan-target="skills"
-  h2.text-center
-    i.fa.fa-cogs
-    |  Compétences
-  .background
-    = render partial: "homepage/skills"
+  section#whoiam.whoiam.row.columns data-magellan-target="whoiam"
+    .background
+      = render partial: "homepage/whoiam"
 
-section#job.job.row.columns data-magellan-target="job"
-  h2.text-center
-    i.fa.fa-briefcase
-    |  Expèrience professionnel 
-  .background    
-    = render partial: "homepage/career"
+  section#skills.skills.row.columns data-magellan-target="skills"
+    h2.text-center
+      i.fa.fa-cogs
+      |  Compétences
+    .background
+      = render partial: "homepage/skills"
 
-section#education.education.row.columns data-magellan-target="education"
-  h2.text-center
-    i.fa.fa-book
-    |  Formation
-  .background    
-    = render partial: "homepage/education"
+  section#job.job.row.columns data-magellan-target="job"
+    h2.text-center
+      i.fa.fa-briefcase
+      |  Expèrience professionnel 
+    .background    
+      = render partial: "homepage/career"
 
-section#hobbies.hobbies.row.columns data-magellan-target="hobbies"
-  h2.text-center
-    i.fa.fa-book
-    |  Loisirs
-  = render partial: "homepage/hobbies"
-        
-section#contact.contact.row.columns data-magellan-target="contact"
-  h2.text-center
-    i.fa.fa-paper-plane-o
-    |  Me contacter
-  = render partial: "homepage/contact"
+  section#education.education.row.columns data-magellan-target="education"
+    h2.text-center
+      i.fa.fa-book
+      |  Formation
+    .background    
+      = render partial: "homepage/education"
+
+  section#hobbies.hobbies.row.columns data-magellan-target="hobbies"
+    h2.text-center
+      i.fa.fa-book
+      |  Loisirs
+    = render partial: "homepage/hobbies"
+          
+  section#contact.contact.row.columns data-magellan-target="contact"
+    h2.text-center
+      i.fa.fa-paper-plane-o
+      |  Me contacter
+    = render partial: "homepage/contact"
