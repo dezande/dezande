@@ -43,6 +43,6 @@ module Dezande
     end
 
     # Configure redis
-    config.cache_store = :redis_store, "redis://0.0.0.0:6379/0/cache", { expires_in: 90.minutes }
+    config.cache_store = :redis_store, "redis://127.0.0.1:6379/0/cache", { expires_in: 90.minutes }
   end
 end
