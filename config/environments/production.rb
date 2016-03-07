@@ -73,7 +73,4 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-  # Configure cache redis
-  config.cache_store = :redis_store, "redis://127.0.0.1:6379/1/cache", { expires_in: 90.minutes }
 end
