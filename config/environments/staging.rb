@@ -76,5 +76,4 @@ Rails.application.configure do
 
   # Configure cache redis
   config.cache_store = :redis_store, "redis://127.0.0.1:6379/0/cache", { expires_in: 90.minutes }
-  config.session_store :redis_store, servers: "redis://localhost:6379/0/session"
 end
