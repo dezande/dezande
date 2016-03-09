@@ -1,8 +1,5 @@
 - flash.each do |key, value|
-  section#flash.flash.row.section-first data-magellan-target="whoiam"
-    .large-8.large-offset-2.medium-10.medium-offset-1.end.columns
-      .background
-        .row
-          .small-offset-1.small-10.end.columns
-            p class="#{key}"
-              = value
+  section#flash.flash.row.columns.section-first data-magellan-target="whoiam"
+    .background
+      p class="#{key}"
+        = value
