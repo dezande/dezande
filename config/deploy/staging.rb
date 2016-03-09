@@ -31,7 +31,7 @@ role :db,  %w{dezande@vincent-corniere.fr}
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 set :deploy_to, '/var/www/dezande/staging'
-set :branch, 'release/0.8.0'
+set :branch, 'release/0.9.0'
 
 # Custom SSH Options
 # ==================

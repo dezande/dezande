@@ -4,7 +4,6 @@ class HomepageController < ApplicationController
     @skills_language = Skill.where(view: true, type: "language")
     @skills_other = Skill.where(view: true).nin(type: "language")
     @contact = Contact.new
-    flash[:notice] = "Post successfully created"
   end
 
   # POST /homepage
