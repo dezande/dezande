@@ -35,6 +35,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'foundation-rails'
 gem 'owlcarousel-rails'
+gem 'ng-rails-csrf'
 
 # Font
 gem 'foundation-icons-sass-rails'

@@ -1,0 +1,35 @@
+<div ng-controller="emailContactController">
+  <form novalidate class="css-form">
+    <div ng-show="message">
+      <div class="row columns">
+        <div class="callout">{{ message }}</div>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="medium-6 columns">
+        <input type="text" placeholder="Nom et prénom" ng-model="contact.name" ng-model-options="{ updateOn: 'blur', debounce: { default: 500, blur: 0 } }" required>
+      </div>
+      <div class="medium-6 columns">
+        <input type="email" placeholder="Adresse mail" ng-model="contact.email" ng-model-options="{ updateOn: 'blur', debounce: { default: 500, blur: 0 } }" required>
+      </div>
+    </div>
+    <div class="row columns">
+      <input type="text" placeholder="Sujet" ng-model="contact.subject" ng-model-options="{ updateOn: 'blur', debounce: { default: 500, blur: 0 } }" required>
+    </div>
+    <div class="row columns">
+      <textarea placeholder="Votre message ..." ng-model="contact.message" ng-model-options="{ updateOn: 'blur', debounce: { default: 500, blur: 0 } }" rows="5" required></textarea>
+    </div>
+    <div class="row">
+      <div class="medium-6 columns">
+        <input class="expanded button success" ng-click="save(contact)" value="Save">
+      </div>
+      <div class="medium-6 columns">
+        <input class="expanded button alert" ng-click="reset" value="Reset">
+      </div>
+    </div>
+  </form>
+  <%- if Rails.env = "development" %>
+    <pre>contact = {{contact | json}}</pre>
+    <pre>masterVisitor = {{masterVisitor | json}}</pre>
+  <% end %>
+</div>
