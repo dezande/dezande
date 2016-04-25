@@ -17,8 +17,6 @@
  *= require devicon-colors
  *= require owl.carousel
  *= require owl.theme
- *= require layouts/header
- *= require layouts/footer
  *= require_tree .
  *= require_self
  */

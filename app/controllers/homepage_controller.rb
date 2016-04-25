@@ -1,9 +1,7 @@
 class HomepageController < ApplicationController
   # GET /
   def index
-    @skills_language = Skill.where(view: true, type: "language")
-    @skills_other = Skill.where(view: true).nin(type: "language")
-    @contact = Contact.new
+    # @contact = Contact.new
   end
 
   # POST /homepage

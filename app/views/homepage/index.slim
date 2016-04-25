@@ -1,37 +1,265 @@
-
 section#whoiam.whoiam.row.columns data-magellan-target="whoiam"
   .background
-    = render partial: "homepage/whoiam"
+    = image_tag "homepage/profile_picture_square.jpg", class: "profil"
+    .row.column.text-center
+      h1.h1-portrait
+        | Vincent Cornière
+        br
+        small Dévellopeur Web
+      p.text-center
+        | Je m'appelle Vincent Cornière. 
+        | Je suis dévellopeur web spécialisé en Ruby On Rails. 
+        = "J'ai #{age} ans. " 
+        | Je vis au Raincy en Île-de-France près de Paris.
+        br
+        | Je travaille en ce moment chez Prium Solutions.
+            
+      .row.small-up-1.medium-up-2.large-up-2.text-center
+        .columns = link_to "Télécharger mon CV", "/cv-vincent-corniere.pdf", target: "_blank", class: "button"
+        .columns data-magellan=""
+          = link_to "Me contacter", "#contact", class: "success button"
 
-section#skills.skills.row.columns data-magellan-target="skills"
+section#skills.skills.row.columns data-magellan-target="skills" 
   h2.text-center
     i.fa.fa-cogs
-    |  Compétences
+    | Compétences
   .background
-    = render partial: "homepage/skills"
+    .text-center
+      h3 Language
+      #competences.skill.owl-carousel
+        div
+          .columns
+            .skill-icons style=("background-color: #d91404;") 
+              .stat
+                i.devicon-ruby-plain
+              | Ruby
+        div
+          .columns
+            .skill-icons style=("background-color: #f0db4f;") 
+              .stat
+                i.devicon-javascript-plain
+              | JavaScript
+        div
+          .columns
+            .skill-icons style=("background-color: #6181b6;") 
+              .stat
+                i.devicon-php-plain
+              | PHP
+        div
+          .columns
+            .skill-icons style=("background-color: #00618a;") 
+              .stat
+                i.devicon-mysql-plain
+              | MySql
+        div
+          .columns
+            .skill-icons style=("background-color: #e54d26;") 
+              .stat
+                i.devicon-html5-plain
+              | HTML 5
+        div
+          .columns
+            .skill-icons style=("background-color: #3d8fc6;") 
+              .stat
+                i.devicon-css3-plain
+              | CSS 3
+        div
+          .columns
+            .skill-icons style=("background-color: #03599c;") 
+              .stat
+                i.devicon-c-plain
+              | C
+        div
+          .columns
+            .skill-icons style=("background-color: #4FAA41;") 
+              .stat
+                i.devicon-mongodb-plain
+              | MongoDB
+        div
+          .columns
+            .skill-icons style=("background-color: #f34f29;") 
+              .stat
+                i.devicon-git-plain
+              | Git
+        div
+          .columns
+            .skill-icons style=("background-color: #28334c;") 
+              .stat
+                i.devicon-coffeescript-original
+              | CoffeeScript
+        div
+          .columns
+            .skill-icons style=("background-color: #cc6699;") 
+              .stat
+                i.devicon-sass-original
+              | Sass
+      h3 Framework / Librairies / CMS
+      #framework.skill.owl-carousel
+        .columns
+          .skill-icons style=("background-color: #a62c46;") 
+            .stat
+              i.devicon-rails-plain
+            | Rails
+        .columns
+          .skill-icons style=("background-color: #1A171B;") 
+            .stat
+              i.devicon-symfony-original
+            | Symfony
+        .columns
+          .skill-icons style=("background-color: #0769ad;") 
+            .stat
+              i.devicon-jquery-plain
+            | jQuery
+        .columns
+          .skill-icons style=("background-color: #c4473a;") 
+            .stat
+              i.devicon-angularjs-plain
+            | AngularJS
+        .columns
+          .skill-icons style=("background-color: #59407f;") 
+            .stat
+              i.devicon-bootstrap-plain
+            | Bootstrap
+        .columns
+          .skill-icons style=("background-color: #0073BA;") 
+            .stat
+              i.devicon-drupal-plain
+            | Drupal
+        .columns
+          .skill-icons style=("background-color: #494949;") 
+            .stat
+              i.devicon-wordpress-plain
+            | Wordpress
+        .columns
+          .skill-icons style=("background-color: #008cba;") 
+            .stat
+              i.devicon-foundation-plain
+            | Foundation
+
 
 section#job.job.row.columns data-magellan-target="job"
   h2.text-center
     i.fa.fa-briefcase
     |  Expèrience professionnel 
   .background    
-    = render partial: "homepage/career"
+    ul.no-bullet.text-center
+      li
+        h4 
+          .uppercase Développeur intégrateur web 
+          small CBM web Paris
+        p De Mars 2015 à Octobre 2015
+      li 
+        h4 
+          .uppercase Graveur 
+          small NMB MINEBEA UK Ldt Lincoln en Angleterre
+        p De Juin 2012 à Septembre 2013
+      li
+        h4 
+          .uppercase Intérimaire
+          small EVS Intérim
+        p D'Août 2010 à Avril 2012
+
 
 section#education.education.row.columns data-magellan-target="education"
   h2.text-center
     i.fa.fa-book
     |  Formation
   .background    
-    = render partial: "homepage/education"
+    ul.no-bullet.text-center
+      li
+        h4 
+          | DÉVELOPPEUR INTÉGRATEUR WEB 
+          br
+          | OPTION PHP ORIENTÉ OBJET
+          br
+          small  IFOCOP Paris 11ème
+        p De Novembre 2014 à Juillet 2015
+      li 
+        h4 
+          | GÉNIE ÉLECTRIQUE
+          br
+          small  
+            span class="bold" data-tooltip="" aria-haspopup="true" data-disable-hover='false' tabindex=1 title="Université de technologie Belfort-Montbéliard"  UTBM
+            |  de Belfort
+        p De 2008 à 2010
+        p Précision: je ne suis pas diplomé.
+      li
+        h4  
+          | CLASSE PRÉPARATOIRE 
+          span class="bold" data-tooltip="" aria-haspopup="true" data-disable-hover='false' tabindex=1 title="Technique et Sciences de l'ingénieur"  TSI
+          br
+          small  Lycée Le Corbusier à Aubervilliers
+        p De 2006 à 2008
+      li
+        h4  
+          | BACCALAURÉAT
+          span class="bold" data-tooltip="" aria-haspopup="true" data-disable-hover='false' tabindex=1 title="Sciences et Technique de l'Industrie"  STI
+          br
+          |  Génie éléctronique 
+          br
+          small  Lycée Gustave Eiffel à Gagny
+        p Diplomé en 2006  
+
 
 section#hobbies.hobbies.row.columns data-magellan-target="hobbies"
   h2.text-center
     i.fa.fa-book
     |  Loisirs
-  = render partial: "homepage/hobbies"
+  #hobbies-eq.row data-equalizer="" data-equalize-on="medium"
+    .medium-4.columns
+      .background data-equalizer-watch=""
+        h3.text-center
+          i.fi-ticket
+          |  MAGIE
+        p Spécialisé dans les tours de cartes.
+
+    .medium-4.columns
+      .background data-equalizer-watch=""
+        h3.text-center
+          i.fi-die-six
+          |  JEU DE PLATEAU
+        p 
+          | Chroniqueur pour le podcast 
+          = link_to "LES DESSOUS DU TROLL.", "http://www.lesdessousdutroll.fr/"
+        p 
+          | Membre du nain porte quoi le club de jeu de rôle et jeu de plateau de 
+          = link_to "l'apjc.", "http://www.apjc.org/"
+
+    .medium-4.columns
+      .background data-equalizer-watch=""
+        h3.text-center
+          i.fa.fa-coffee
+          |  CUISINE
+        p Amateur de la cuisine japonaise et de la cuisine traditionnel.
+
         
 section#contact.contact.row.columns data-magellan-target="contact"
   h2.text-center
     i.fa.fa-paper-plane-o
     |  Me contacter
-  = render partial: "homepage/contact"
+  / .background
+  /   = render partial: "homepage/contact_form"
+
+  .background.background--contact
+    .small-up-1.medium-up-2.large-up-4.text-center.contact
+      .columns.contact-color-phone 
+        a href="#"
+          .stat
+            i.fi-telephone.size-72
+          | 06 95 37 49 55
+      .columns.contact-color-mail 
+        a href="mailto:vincent.corniere@gmail.com"
+          .stat
+            i.fi-mail.size-72
+          | Par email
+      .columns.contact-color-linkelin
+        a href="https://fr.linkedin.com/in/vincentcorniere" target="_blank"
+          .stat
+            i.fi-social-linkedin.size-72
+          | Linkedin
+      .columns.contact-color-github
+        a href="https://github.com/dezande" target="_blank"
+          .stat
+            i.fi-social-github.size-72
+          | GitHub
+  #content

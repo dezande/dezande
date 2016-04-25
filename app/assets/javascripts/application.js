@@ -15,19 +15,4 @@
 //= require foundation
 //= require turbolinks
 //= require owl.carousel
-//= require angular
-//= require angular-route
-//= require angular-resource
-//= require ng-rails-csrf
 //= require_tree .
-
-$(function(){ $(document).foundation(); });
-
-$(document).ready(function() {
-  $("#competences").owlCarousel({
-    items : 4
-  });
-  $("#framework").owlCarousel({
-    items : 4
-  });
-});
