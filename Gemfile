@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 6.2.1'
 gem 'owlcarousel-rails'
 # gem 'react-rails', '~> 1.6.0'
 gem "sprockets"
